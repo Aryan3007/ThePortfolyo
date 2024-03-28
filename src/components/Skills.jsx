@@ -20,7 +20,7 @@ const Skills = () => {
         My Skills
       </h2>
       <hr className="my-8 border-gray-400" />
-      <div className="grid grid-cols-2 gap-6 justify-between md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 lg:gap-6 gap-3 justify-between md:grid-cols-2 xl:grid-cols-4">
         {enabledSkills.map((skill, index) => (
           <div
             key={index}

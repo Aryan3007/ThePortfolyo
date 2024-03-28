@@ -132,7 +132,7 @@ export const Projects = () => {
           </div>
         </div>
         <div className="container flex flex-col pb-10 mx-auto">
-          <hr className="my-8 border-gray-800" />
+          <hr className="my-8 border-gray-200" />
           <div className="grid grid-cols-1 gap-6 justify-between md:grid-cols-2 xl:grid-cols-3">
             {projectsToDisplay.map((project, index) => (
               <div
@@ -147,7 +147,7 @@ export const Projects = () => {
                   />
                 </div>
                 <div className="mt-8">
-                  <h1 className="mt-4 text-xl font-bold text-gray-800">
+                  <h1 className="mt-4 text-xl font-bold bg-purple-200 w-fit px-3 py-1 rounded-xl text-gray-800">
                     {project.title}
                   </h1>
 
@@ -182,10 +182,10 @@ export const Projects = () => {
         {/* Modal for project details */}
         {selectedProject && (
           <>
-            <dialog id="my_modal_3" className="modal text-black w-full">
+            <dialog id="my_modal_3" className="modal text-black p-4 w-full">
               <div
                 key={selectedProject._id}
-                className="group flex-col lg:flex-row relative flex gap-4 p-4 lg:w-[900px] md:w-[400px] w-screen overflow-hidden bg-neutral-100 rounded-xl"
+                className="group flex-col lg:flex-row relative flex gap-4 p-4 lg:w-[900px] md:w-[400px] w-full overflow-hidden bg-neutral-100 rounded-xl"
               >
                 <div className="lg:h-fit w-full h-1/2 flex justify-center items-center lg:w-1/2 rounded-lg bg-gradient-to-r overflow-hidden from-purple-400  to-purple-600">
                   <img
@@ -195,7 +195,7 @@ export const Projects = () => {
                   />
                 </div>
                 <div className="lg:w-1/2 flex flex-col justify-center gap-4">
-                  <p className="bg-purple-300 py-1 rounded-full w-fit px-4">
+                  <p className="bg-purple-200 font-semibold py-1 rounded-full w-fit px-6">
                     {selectedProject.title}
                   </p>
 

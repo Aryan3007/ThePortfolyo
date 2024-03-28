@@ -9,19 +9,18 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
+      staggerChildren: 0.2,
+    },
+  },
 };
 
 const item = {
-  hidden: { y: 20, opacity: 0 },
+  hidden: { x: -20, opacity: 0 },
   visible: {
-    y: 0,
-    opacity: 1
-  }
+    x: 0,
+    opacity: 1,
+  },
 };
-
 
 const Navbar = () => {
   // State to manage whether the dropdown is open or closed
@@ -31,7 +30,6 @@ const Navbar = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
-
 
   const scrolltoTop = () => {
     const homepage = document.getElementById("homepage");
@@ -46,28 +44,28 @@ const Navbar = () => {
     if (skills) {
       skills.scrollIntoView({ behavior: "smooth" });
     }
-  };  
-    const scrolltoservices = () => {
-      setIsDropdownOpen(!isDropdownOpen);
+  };
+  const scrolltoservices = () => {
+    setIsDropdownOpen(!isDropdownOpen);
     const service = document.getElementById("service");
     if (service) {
       service.scrollIntoView({ behavior: "smooth" });
     }
-  };  
+  };
   const scrolltoProjects = () => {
     setIsDropdownOpen(!isDropdownOpen);
     const projects = document.getElementById("projects");
     if (projects) {
       projects.scrollIntoView({ behavior: "smooth" });
     }
-  };  
+  };
   const scrolltoTimeline = () => {
     setIsDropdownOpen(!isDropdownOpen);
     const timeline = document.getElementById("timeline");
     if (timeline) {
       timeline.scrollIntoView({ behavior: "smooth" });
     }
-  };  
+  };
   const scrolltoTestimonial = () => {
     setIsDropdownOpen(!isDropdownOpen);
     const testimonial = document.getElementById("testimonial");
@@ -75,7 +73,6 @@ const Navbar = () => {
       testimonial.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   const scrolltoFeatured = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -93,12 +90,10 @@ const Navbar = () => {
     }
   };
 
-
-
   return (
     <div className="navbar fixed z-50">
       <div className="navbar-end w-full z-50">
-        <div className="dropdown bg-purple-300 text-black rounded-full">
+        <div className="dropdown bg-purple-500 text-white rounded-full">
           <div
             tabIndex={0}
             role="button"
@@ -125,33 +120,74 @@ const Navbar = () => {
           {/* Render the dropdown menu based on the state */}
           {isDropdownOpen && (
             <motion.ul
-          
-            variants={container}
-            initial="hidden"
-            animate="visible" className="menu container menu-sm dropdown-content mt-3 z-[1] p-2 py-8 text-white shadow right-4 bg-zinc-900 rounded-box w-80  flex justify-between  flex-col">
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoTop} className="text-lg">Homepage</button>
+              variants={container}
+              initial="hidden"
+              animate="visible"
+              className="menu container menu-sm dropdown-content mt-3 z-[1] p-2 py-8 text-white shadow right-4 bg-zinc-900 rounded-box w-80  flex justify-between  flex-col"
+            >
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoTop} className="text-lg">
+                  Homepage
+                </button>
               </motion.li>
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoskills}  className="text-lg">Skills</button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoskills} className="text-lg">
+                  Skills
+                </button>
               </motion.li>
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoservices} className="text-lg">Services</button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoservices} className="text-lg">
+                  Services
+                </button>
               </motion.li>
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoProjects} className="text-lg">Projects </button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoProjects} className="text-lg">
+                  Projects{" "}
+                </button>
               </motion.li>
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoTimeline} className="text-lg">Timeline </button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoTimeline} className="text-lg">
+                  Timeline{" "}
+                </button>
               </motion.li>
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoTestimonial} className="text-lg">Testimonial </button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoTestimonial} className="text-lg">
+                  Testimonial{" "}
+                </button>
               </motion.li>{" "}
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltoFeatured} className="text-lg">Featured Work </button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltoFeatured} className="text-lg">
+                  Featured Work{" "}
+                </button>
               </motion.li>{" "}
-              <motion.li variants={item} className="hover:text-purple-400 item ">
-                <button onClick={scrolltocontact} className="text-lg">Contact </button>
+              <motion.li
+                variants={item}
+                className="hover:text-purple-400 item "
+              >
+                <button onClick={scrolltocontact} className="text-lg">
+                  Contact{" "}
+                </button>
               </motion.li>
             </motion.ul>
           )}

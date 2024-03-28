@@ -6,8 +6,8 @@ const Cursor = () => {
       const cursor = document.getElementById("cursor");
 
       if (cursor) {
-        cursor.style.left = event.clientX - 50 + "px";
-        cursor.style.top = event.clientY - 50 + "px";
+        cursor.style.left = event.clientX - 70 + "px";
+        cursor.style.top = event.clientY - 70 + "px";
       }
     };
 
@@ -24,8 +24,8 @@ const Cursor = () => {
       className="cursor lg:flex hidden"
       style={{
         position: "fixed",
-        width: "100px",
-        height: "100px",
+        width: "140px",
+        height: "140px",
         background: "#E08BFF",
         borderRadius: "50%",
       }}

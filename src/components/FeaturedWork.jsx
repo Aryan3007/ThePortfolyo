@@ -8,15 +8,18 @@ const FeaturedWork = () => {
   };
 
   return (
-    <div id="featuredwork" className="relative my-24 z-20 lg:ml-96 p-4 flex min-h-screen flex-col bg-black">
+    <div
+      id="featuredwork"
+      className="relative my-24 lg:ml-96 p-4 flex min-h-screen flex-col bg-black"
+    >
       <div className="min-h-28">
         <div className="mx-auto py-4">
           <h2 className="font-black text-purple-300 text-5xl lg:text-7xl  uppercase">
             featured work
           </h2>
-
+          <hr className="my-8 border-gray-200" />
           <div className="gap-6 mt-8 mx-4 md:flex">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 z-10 relative">
               <div
                 className="wrap-video"
                 onMouseEnter={hoverVideo}
@@ -41,7 +44,7 @@ const FeaturedWork = () => {
                 the trail less taken
               </span>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 z-10 relative">
               <div
                 className="wrap-video"
                 onMouseEnter={hoverVideo}
@@ -68,7 +71,7 @@ const FeaturedWork = () => {
             </div>
           </div>
           <div className="gap-6 mt-8 mx-4 md:flex">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 z-10 relative">
               <div
                 className="wrap-video"
                 onMouseEnter={hoverVideo}
@@ -93,7 +96,7 @@ const FeaturedWork = () => {
                 the trail less taken
               </span>
             </div>
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 z-10 relative">
               <div
                 className="wrap-video"
                 onMouseEnter={hoverVideo}

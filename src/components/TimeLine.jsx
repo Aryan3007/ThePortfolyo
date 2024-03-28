@@ -39,7 +39,7 @@ const TimeLine = () => {
       <h2 className="font-black text-purple-300 text-5xl lg:text-7xl  uppercase">
         Timeline
       </h2>
-      <hr className="my-8 border-gray-800" />
+      <hr className="my-8 border-gray-200" />
       <h1 className="text-white text-5xl font-bold my-6">For Education</h1>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
         {enabledTimelines_foreducation.map((time, index) => (

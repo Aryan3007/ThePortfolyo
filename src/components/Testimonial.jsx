@@ -50,11 +50,12 @@ export const Testimonial = () => {
   return (
     <div
       id="testimonial"
-      className="relative overflow-hidden z-20 bg-neutral-950 py-8"
+      className="relative overflow-hidden bg-neutral-950 py-8"
     >
       <h2 className="font-black lg:ml-96 text-purple-300 text-5xl p-2 lg:px-12 lg:text-7xl  uppercase">
         Testimonials
       </h2>
+      <hr className="my-8 border-gray-200" />
       <motion.div
         drag="x"
         dragConstraints={{
@@ -69,7 +70,7 @@ export const Testimonial = () => {
         }}
         transition={SPRING_OPTIONS}
         onDragEnd={onDragEnd}
-        className="flex cursor-grab lg:ml-96 items-center active:cursor-grabbing"
+        className="flex cursor-grab lg:ml-96 relative z-10 items-center active:cursor-grabbing"
       >
         <Images imgIndex={imgIndex} />
       </motion.div>
@@ -111,7 +112,7 @@ const Images = ({ imgIndex }) => {
           transition={SPRING_OPTIONS}
           className="h-full w-full flex justify-center items-center shrink-0 object-cover"
         >
-          <section className="bg-white rounded-xl z-10 ">
+          <section className="bg-white rounded-xl">
             <div className="container h-fit px-6 py-10 mx-auto">
               <div className="lg:-mx-6 lg:flex lg:items-center">
                 <img

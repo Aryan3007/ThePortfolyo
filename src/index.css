@@ -132,13 +132,13 @@ body {
 }
 
 .cursor {
-  z-index: 9;
+  z-index: 1;
   position: fixed;
   border-radius: 20px;
   height: 10px;
   width: 10px;
   /* transition: all linear 0.1s; */
-  mix-blend-mode: difference;
+  mix-blend-mode:multiply;
   background-color: rgb(0, 0, 0);
 }
 
@@ -172,8 +172,9 @@ body {
   width: 10em;
   height: 10em;
   border-radius: 50%;
-  box-shadow: 0.5em 1em 1em blue, -0.5em 0.5em 1em lime, 0.5em -0.5em 1em cyan,
-    -0.5em -0.5em 1em yellow;
+  box-shadow: 0.5em 1em 1em rgb(196, 68, 255),
+    -0.5em 0.5em 1em rgb(147, 32, 255), 0.5em -0.5em 1em rgb(157, 0, 255),
+    -0.5em -0.5em 1em rgb(115, 0, 255);
 }
 
 .external-shadow {
@@ -184,8 +185,9 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 0.5em 0.5em 3em blue, -0.5em 0.5em 3em lime, 0.5em -0.5em 3em cyan,
-    -0.5em -0.5em 3em yellow;
+  box-shadow: 0.5em 1em 1em rgb(196, 68, 255),
+    -0.5em 0.5em 1em rgb(147, 32, 255), 0.5em -0.5em 1em rgb(157, 0, 255),
+    -0.5em -0.5em 1em rgb(115, 0, 255);
   z-index: 999;
   animation: rotate 3s linear infinite;
   background-color: #212121;

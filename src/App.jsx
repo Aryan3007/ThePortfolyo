@@ -1,23 +1,14 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
 import { useData } from "./context/data";
 import axios from "axios";
-import Homepage from "./pages/HomePage";
-import Skills from "./components/Skills";
-import { Projects } from "./components/Projects";
-import { HoverImageLinks } from "./components/HoverlmageLinks";
-import { Testimonial } from "./components/Testimonial";
-import Strips from "./components/Strips";
-import SocialLinks from "./components/SocialLinks";
-import TimeLine from "./components/TimeLine";
-import Footer from "./components/Footer";
 import Loader from "./components/Loader";
-import FeaturedWork from "./components/FeaturedWork";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Homepage from "./pages/HomePage";
 import SideBar from "./components/SideBar";
+import Navbar from "./components/Navbar";
 
 function App() {
   useEffect(() => {
@@ -63,17 +54,9 @@ function App() {
           <Loader />
         ) : (
           <div className=" overflow-hidden">
-            <Navbar/>
-            <SideBar />
+                  <Navbar />
+            <SideBar/>
             <Homepage />
-            <Skills/>
-            <HoverImageLinks />
-            <Projects/>
-            <TimeLine/>
-            <Testimonial/>
-            <FeaturedWork/>
-            <SocialLinks/>
-            <Footer/>
           </div>
         )}
       </div>

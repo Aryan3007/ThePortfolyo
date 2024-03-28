@@ -3,7 +3,6 @@ import { useData } from "../context/data";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
-
 const SideBar = () => {
   const { data } = useData();
 
@@ -29,13 +28,13 @@ const SideBar = () => {
         </div>
       </div>
 
-      <div className="px-8">
+      <div className="px-8 flex justify-center flex-col items-center">
         <p className="text-sm text-left uppercase font-semibold  my-4">
           {data.user.about.subTitle}
         </p>
-        <h1 className="w-80 px-4 bg-gradient-to-tr from-purple-400 to-purple-300 py-3 text-center rounded-full">
+        <button className="w-80 px-4 bg-gradient-to-br from-purple-400 to-purple-600 py-3 text-center rounded-full">
           Let's Work Together!
-        </h1>
+        </button>
       </div>
 
       <div className="my-4 gap-4 flex flex-col">
